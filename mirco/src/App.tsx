@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { Application, ConfigurationFatory, container } from '@linkseeks/core';
+import { Application, ConfigurationFatory } from '@linkseeks/core';
 import HomePage from './pages/index';
 import { TestService } from './service/TestService';
-import { useInject } from './hooks';
+import { useAsyncEffect } from 'linkseeks-hooks';
+import {useInject as useInjectLocation} from './hooks'
+import {useAsyncEffect as useAsyncEffectAhooks} from 'ahooks';
+
+console.log(useAsyncEffect);
+console.log(useInjectLocation);
+console.log(useAsyncEffect);
 
 
 
@@ -12,7 +18,7 @@ function App() {
   const config = ConfigurationFatory.getInstance();
   const key = config.getConfig('Key');
 
-  const [service] = useInject<TestService>('testService');
+  const [service] = useAsyncEffect<TestService>('testService');
 
   return (
     <Application>
