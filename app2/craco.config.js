@@ -1,5 +1,5 @@
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
-const { ModuleFederationPlugin } = require('webpack').container;
+const { ModuleFederationPlugin } = require('webpack').container
 
 module.exports = {
   webpack: {
@@ -10,11 +10,15 @@ module.exports = {
       // 查看打包的进度
       new SimpleProgressWebpackPlugin(),
       new ModuleFederationPlugin({
-        name: 'main',
-        exposes: {},
-        remotes: {
-          app: 'app2@http://localhost:4002/remoteEntry.js'
-        }
+        name: "app2",
+        filename: 'remoteEntry.js',
+        exposes: {
+          './App': './src/App'
+        },
+        shared: [
+          "react",
+          "react-dom"
+        ]
       })
     ]
   }
