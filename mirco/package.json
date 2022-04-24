@@ -13,7 +13,7 @@
     "@types/react-dom": "^18.0.1",
     "ahooks": "^3.3.8",
     "inversify": "^6.0.1",
-    "linkseeks-hooks": "1.0.2",
+    "linkseeks-hooks": "1.0.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",

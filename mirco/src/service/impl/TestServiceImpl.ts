@@ -1,7 +1,7 @@
  import {injectable} from 'inversify';
 
  @injectable()
- class TestServiceImpl {
+ export class TestServiceImpl {
   sendHollow(): string {
     return "Send Hollow";
   }
