@@ -1,24 +1,29 @@
-import 'reflect-metadata';
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import initApp from './init';
+//import './bootstrap';
 
-//Initialize the app
-initApp();
+export async function bootstrap() {
+  console.log('react app bootstraped');
+}
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+export async function mount(props: any) {
+  
+  const root = ReactDOM.createRoot(
+    props.container ? props.container.querySelector('#micro1') : document.getElementById('root')
+  );
+  root.render(<App />)
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export async function unmount(props: any) {
+  const root = ReactDOM.createRoot(
+    props.container ? props.container.querySelector('#micro1') : document.getElementById('root')
+  );
+  root.unmount()
+}
+
+/**
+ * 可选生命周期钩子，仅使用 loadMicroApp 方式加载微应用时生效
+ */
+export async function update(props: any) {
+  console.log('update props', props);
+}

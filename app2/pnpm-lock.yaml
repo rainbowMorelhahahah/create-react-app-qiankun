@@ -13,6 +13,7 @@ specifiers:
   ahooks: ^3.3.8
   inversify: ^6.0.1
   linkseeks-hooks: ^1.0.6
+  qiankun: ^2.7.0
   react: ^18.0.0
   react-dom: ^18.0.0
   react-scripts: 5.0.1
@@ -34,6 +35,7 @@ dependencies:
   ahooks: 3.3.8_react@18.0.0
   inversify: 6.0.1
   linkseeks-hooks: 1.0.6_4ba69c7787dfd9a3579e23e97d93e7b4
+  qiankun: 2.7.0
   react: registry.npmmirror.com/react/18.0.0
   react-dom: registry.npmmirror.com/react-dom/18.0.0_react@18.0.0
   react-scripts: registry.npmmirror.com/react-scripts/5.0.1_react@18.0.0+typescript@4.6.3
@@ -987,6 +989,12 @@ packages:
       resolve-from: 4.0.0
     dev: false
 
+  /import-html-entry/1.12.0:
+    resolution: {integrity: sha512-wloMEMwupKJ8DWvKsEzJTXhHVieEH8ylu9ebeQg7T9JUsPTo0Zwa1EkuSKgKJvOiA2MxAFkeYYvd/E2pKiFtWQ==}
+    dependencies:
+      '@babel/runtime': 7.17.9
+    dev: false
+
   /inflight/1.0.6:
     resolution: {integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=}
     dependencies:
@@ -1414,6 +1422,16 @@ packages:
       react-is: 16.13.1
     dev: false
 
+  /qiankun/2.7.0:
+    resolution: {integrity: sha512-MvsRNsu/2dql9un6qWRz/uNsyrFKa2b21Yxpb6UQpNu1pAl16xFozLDufBqiv/RbaGLI+f37VMwofi8n6WpP3w==}
+    dependencies:
+      '@babel/runtime': 7.17.9
+      import-html-entry: 1.12.0
+      lodash: 4.17.21
+      single-spa: 5.9.3
+      tslib: 1.14.1
+    dev: false
+
   /raf/3.4.1:
     resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
     dependencies:
@@ -1638,6 +1656,10 @@ packages:
       figures: 3.2.0
       log-update: 4.0.0
     dev: true
+
+  /single-spa/5.9.3:
+    resolution: {integrity: sha512-qMGraRzIBsodV6569Fob4cQ4/yQNrcZ5Achh3SAQDljmqUtjAZ7BAA7GAyO/l5eizb7GtTmVq9Di7ORyKw82CQ==}
+    dev: false
 
   /slice-ansi/4.0.0:
     resolution: {integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==}
@@ -5528,7 +5550,7 @@ packages:
     version: 3.1.0
     engines: {node: '>=10', npm: '>=6'}
     dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.17.9
+      '@babel/runtime': 7.17.9
       cosmiconfig: 7.0.1
       resolve: registry.npmmirror.com/resolve/1.22.0
     dev: false
@@ -5650,7 +5672,7 @@ packages:
       '@babel/preset-env': registry.npmmirror.com/@babel/preset-env/7.16.11_@babel+core@7.17.9
       '@babel/preset-react': registry.npmmirror.com/@babel/preset-react/7.16.7_@babel+core@7.17.9
       '@babel/preset-typescript': registry.npmmirror.com/@babel/preset-typescript/7.16.7_@babel+core@7.17.9
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.17.9
+      '@babel/runtime': 7.17.9
       babel-plugin-macros: registry.npmmirror.com/babel-plugin-macros/3.1.0
       babel-plugin-transform-react-remove-prop-types: registry.npmmirror.com/babel-plugin-transform-react-remove-prop-types/0.4.24
     transitivePeerDependencies:
@@ -6885,7 +6907,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
     dependencies:
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.17.9
+      '@babel/runtime': 7.17.9
       aria-query: registry.npmmirror.com/aria-query/4.2.2
       array-includes: registry.npmmirror.com/array-includes/3.1.4
       ast-types-flow: registry.npmmirror.com/ast-types-flow/0.0.7
@@ -12518,7 +12540,7 @@ packages:
       '@apideck/better-ajv-errors': registry.npmmirror.com/@apideck/better-ajv-errors/0.3.3_ajv@8.11.0
       '@babel/core': registry.npmmirror.com/@babel/core/7.17.9
       '@babel/preset-env': registry.npmmirror.com/@babel/preset-env/7.16.11_@babel+core@7.17.9
-      '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.17.9
+      '@babel/runtime': 7.17.9
       '@rollup/plugin-babel': registry.npmmirror.com/@rollup/plugin-babel/5.3.1_@babel+core@7.17.9+rollup@2.70.2
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.70.2
       '@rollup/plugin-replace': registry.npmmirror.com/@rollup/plugin-replace/2.4.2_rollup@2.70.2
