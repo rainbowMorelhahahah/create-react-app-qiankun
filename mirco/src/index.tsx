@@ -1,7 +1,17 @@
 import './bootstrap';
 import { registerMicroApps, start, MicroAppStateActions, initGlobalState } from 'qiankun';
+import { ConfigurationFatory } from '@linkseeks/core';
 
-export const actions: MicroAppStateActions = initGlobalState()
+const appConfig = ConfigurationFatory.getInstance()
+appConfig.setConfig("mircoTest", "Test123")
+
+const state = {}
+const actions: MicroAppStateActions = initGlobalState(state)
+
+actions.setGlobalState({
+  appConfig
+});
+
 
 registerMicroApps([
   {

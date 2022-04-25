@@ -1,19 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import { ConfigurationFatory } from '@linkseeks/core';
+import { appConfig } from '.';
 
 function App() {
 
-  const config = ConfigurationFatory.getInstance()
-  const value = config.getConfig("mircoTest")
-
-  console.log(value);
-  
+  const value = appConfig.getConfig('mircoTest');
 
   return (
     <>
-      Hollow App2
+      Hollow App2 {value}
     </>
   );
 }

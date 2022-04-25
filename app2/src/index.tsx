@@ -2,12 +2,18 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 //import './bootstrap';
 
+export let appConfig: any = {};
+
 export async function bootstrap() {
   console.log('react app bootstraped');
 }
 
 export async function mount(props: any) {
-  
+
+  props.onGlobalStateChange((state: any, prev: any) => {
+    appConfig = state.appConfig;
+  }, true)
+
   const root = ReactDOM.createRoot(
     props.container ? props.container.querySelector('#micro1') : document.getElementById('root')
   );

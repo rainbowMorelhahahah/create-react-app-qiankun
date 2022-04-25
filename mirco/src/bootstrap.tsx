@@ -7,8 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import initApp from './init';
 import { ConfigurationFatory } from '@linkseeks/core';
 
-ConfigurationFatory.getInstance().setConfig("mircoTest", "Test123")
-
 //Initialize the app
 initApp();
 
