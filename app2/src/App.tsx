@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
-import { appConfig } from '.';
+import { appConfig, appPropst } from '.';
 
 function App() {
 
@@ -10,6 +10,14 @@ function App() {
   return (
     <>
       Hollow App2 {value}
+
+      <button onClick={() => {
+        appConfig.setConfig("mircoTest", "Test456")
+        appPropst.setGlobalState({
+          appConfig
+        })
+        window.history.pushState({}, '', "/app3")
+      }}>to App3</button>
     </>
   );
 }

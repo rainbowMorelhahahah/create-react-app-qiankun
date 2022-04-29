@@ -1,11 +1,8 @@
-import { MicroAppStateActions } from 'qiankun';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 //import './bootstrap';
 
 export let appConfig: any = {};
-
-export let appPropst: MicroAppStateActions;
 
 export async function bootstrap() {
   console.log('react app bootstraped');
@@ -16,9 +13,7 @@ export async function mount(props: any) {
   props.onGlobalStateChange((state: any, prev: any) => {
     appConfig = state.appConfig;
   }, true)
-
-  appPropst = props;
-
+  
   const root = ReactDOM.createRoot(
     props.container ? props.container.querySelector('#root') : document.getElementById('root')
   );

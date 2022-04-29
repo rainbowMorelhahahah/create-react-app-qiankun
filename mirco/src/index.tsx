@@ -12,6 +12,10 @@ actions.setGlobalState({
   appConfig
 });
 
+actions.onGlobalStateChange((state,prv)=>{
+  console.log(state);
+},true)
+
 
 registerMicroApps([
   {
@@ -19,6 +23,12 @@ registerMicroApps([
     entry: 'http://localhost:4002',
     container: '#app2',
     activeRule: '/app2',
+  },
+  {
+    name: 'react app2', // app name registered
+    entry: 'http://localhost:4003',
+    container: '#app3',
+    activeRule: '/app3',
   }
 ])
 
